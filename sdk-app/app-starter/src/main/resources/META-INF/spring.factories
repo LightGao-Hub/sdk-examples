@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.example.sdk.app.starter.config.AppWebConfig,\
+org.example.sdk.app.starter.AppWebAutoConfiguration
