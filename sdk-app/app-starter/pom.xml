@@ -20,11 +20,6 @@
     <dependencies>
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>app-api</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.example</groupId>
             <artifactId>app-common</artifactId>
             <version>${revision}</version>
         </dependency>
@@ -33,5 +28,21 @@
             <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>5.2.4</version>
+                <configuration>
+                    <url>jdbc:mysql://127.0.0.1:3306/test?useUnicode=true;characterEncoding=utf-8;serverTimezone=Asia/Shanghai;useSSL=false</url>
+                    <user>root</user>
+                    <password>Zuen.123@</password>
+                    <driver>com.mysql.cj.jdbc.Driver</driver>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
